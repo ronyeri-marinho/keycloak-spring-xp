@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: keycloak-spring-xp
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: ${APP_OAUTH2_JWK_ISSUER_URI:http://localhost:8181/realms/keycloak-demo}
+          jwk-set-uri: ${spring.security.oauth2.resource-server.jwt.issuer-uri}/protocol/openid-connect/certs
